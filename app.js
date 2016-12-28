@@ -40,25 +40,24 @@ port:'3306',
   database : 'nammaooru'
 }); 
 */
-/*var connection = mysql.createConnection({
+var connection = mysql.createConnection({
 
 host:'127.4.188.2',
-port:'3306',
 user:'adminfG3JNNG',
-password:'la65E2Rzzys4'
-
+password:'la65E2Rzzys4',
+database:'nammaooru'
 //URL='https://vickyjenkins-bosscreations.rhcloud.com/phpmyadmin/'
 
-});*/
+});
 
 
 
-var connection = mysql.createConnection({
+/*var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : '',
   database : 'jj'
-});
+});*/ 
   
 if(connection)
 {
@@ -86,7 +85,7 @@ console.log(t);
 
     console.log(req.params.cityid);
     var t=1;
-    connection.query("SELECT * from detais",function(err, rows, fields){
+    connection.query("SELECT * from city",function(err, rows, fields){
         
 console.log("success"+JSON.stringify(rows));
 
@@ -129,7 +128,7 @@ console.log(t);
 
     console.log(req.params.cityid);
     var t=1;
-    connection.query("SELECT * from detais  where id="+req.params.cityid,function(err, rows, fields){
+    connection.query("SELECT * FROM city",function(err, rows, fields){
         
 console.log("success"+JSON.stringify(rows));
 
