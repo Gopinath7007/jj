@@ -105,7 +105,7 @@ console.log(e);
 });
 app.get('/jj/',function(req,res){
 
-res.send("Connection Success");
+res.send("Connection Success ok");
 });
 
 app.get('/city/:cityid',function(req,res){
