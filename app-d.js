@@ -105,11 +105,7 @@ console.log(e);
 });
 app.get('/jj/',function(req,res){
 
-res.send("Connection Success change");
-});
-app.get('/jss/',function(req,res){
-
-res.send("Connection Success change");
+res.send("Connection Success");
 });
 
 app.get('/city/:cityid',function(req,res){
