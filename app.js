@@ -31,7 +31,7 @@ app.use('/users', users);
 
 var http =require('http');
 
-/*
+
 var connection = mysql.createConnection({
   host     : '127.4.188.2',
 port:'3306',
@@ -39,15 +39,28 @@ port:'3306',
   password : 'la65E2Rzzys4',
   database : 'nammaooru'
 }); 
+
+
+/*var connection = mysql.createConnection({
+
+OPENSHIFT_MYSQL_DB_HOST :'127.4.188.2',
+OPENSHIFT_MYSQL_DB_PORT :'3306',
+OPENSHIFT_MYSQL_DB_USERNAME:'adminfG3JNNG',
+OPENSHIFT_MYSQL_DB_PASSWORD:'la65E2Rzzys',
+OPENSHIFT_MYSQL_DB_URL:'mysql://adminfG3JNNG:la65E2Rzzys4@127.4.188.2:3306'
+});
 */
-var connection = mysql.createConnection({
 
-host:'127.4.188.2',
-user:'adminfG3JNNG',
-password:'la65E2Rzzys4',
-database:'nammaooru'
-//URL='https://vickyjenkins-bosscreations.rhcloud.com/phpmyadmin/'
+connection.connect(function(err,success){
+  if (err) {
+    throw err;
+  console.log("Error"+err);
 
+  }
+  else
+  {
+    console.log("Success"+success);
+  }
 });
 
 
@@ -68,7 +81,7 @@ else
 {
   console.log("Error");
 }
-app.get('/city/',function(req,res){
+app.get('/city',function(req,res){
 try{
 
 
@@ -88,8 +101,9 @@ console.log(t);
     connection.query("SELECT * from city",function(err, rows, fields){
         
 console.log("success"+JSON.stringify(rows));
-
+res.send("dsadasda");
 //console.log("success"+JSON.stringify(fields));
+console.log(JSON.stringify(rows));
 res.send(JSON.stringify(rows));
 //console.log("success"+JSON.stringify(err));
      
