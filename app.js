@@ -31,25 +31,26 @@ app.use('/users', users);
 
 var http =require('http');
 
-
+/*
 var connection = mysql.createConnection({
   host     : '127.4.188.2',
-port:'3306',
+  port:'3306',
   user     : 'adminfG3JNNG',
   password : 'la65E2Rzzys4',
   database : 'nammaooru'
 }); 
+*/
 
-
-/*var connection = mysql.createConnection({
+var connection = mysql.createConnection({
 
 OPENSHIFT_MYSQL_DB_HOST :'127.4.188.2',
 OPENSHIFT_MYSQL_DB_PORT :'3306',
 OPENSHIFT_MYSQL_DB_USERNAME:'adminfG3JNNG',
 OPENSHIFT_MYSQL_DB_PASSWORD:'la65E2Rzzys',
 OPENSHIFT_MYSQL_DB_URL:'mysql://adminfG3JNNG:la65E2Rzzys4@127.4.188.2:3306'
+
 });
-*/
+
 
 connection.connect(function(err,success){
   if (err) {
