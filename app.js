@@ -40,17 +40,26 @@ var connection = mysql.createConnection({
   database : 'nammaooru'
 }); 
 */
-/*
+
 var connection = mysql.createConnection({
 
 OPENSHIFT_MYSQL_DB_HOST :'127.4.188.2',
-OPENSHIFT_MYSQL_DB_PORT :'3306',
+//OPENSHIFT_MYSQL_DB_PORT :'3306',
 OPENSHIFT_MYSQL_DB_USERNAME:'adminfG3JNNG',
 OPENSHIFT_MYSQL_DB_PASSWORD:'la65E2Rzzys',
 OPENSHIFT_MYSQL_DB_URL:'mysql://adminfG3JNNG:la65E2Rzzys4@127.4.188.2:3306'
 
 });
-*/
+
+
+/*var connection = mysql.createConnection({
+  host     : 'localhost',
+  port:'3306',
+  user     : 'root',
+  password : '',
+  database : 'nammaooru'
+});
+*/ /*
 var connection = mysql.createConnection({
 
 host :'127.4.188.2',
@@ -59,7 +68,7 @@ user:'adminfG3JNNG',
 password:'la65E2Rzzys',
 database:'nammaooru',
 });
-
+*/
 connection.connect(function(err,success){
   if (err) {
     throw err;
