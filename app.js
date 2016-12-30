@@ -52,13 +52,13 @@ OPENSHIFT_MYSQL_DB_URL:'mysql://adminfG3JNNG:la65E2Rzzys4@127.4.188.2:3306'
 });*/
 
 
-var connection = mysql.createConnection({
+/*var connection = mysql.createConnection({
   host     : 'localhost',
 //  port:'3306',
   user     : 'root',
   password : '',
   database : 'nammaooru'
-});
+});*/
 /*
 var connection = mysql.createConnection({
 
@@ -69,7 +69,7 @@ password:'la65E2Rzzys',
 database:'nammaooru',
 });
 */
-connection.connect(function(err,success){
+/*connection.connect(function(err,success){
   if (err) {
     throw err;
   console.log("Error"+err);
@@ -80,7 +80,7 @@ connection.connect(function(err,success){
     console.log("Success"+success);
   }
 });
-
+*/
 
 
 /*var connection = mysql.createConnection({
@@ -90,15 +90,6 @@ connection.connect(function(err,success){
   database : 'jj'
 });*/ 
   
-if(connection)
-{
-  //console.log("Success"+connection);
-
-}
-else
-{
-  console.log("Error");
-}
 app.get('/city',function(req,res){
 try{
 
