@@ -40,7 +40,7 @@ var connection = mysql.createConnection({
   database : 'nammaooru'
 }); 
 */
-
+/*
 var connection = mysql.createConnection({
 
 OPENSHIFT_MYSQL_DB_HOST :'127.4.188.2',
@@ -50,7 +50,15 @@ OPENSHIFT_MYSQL_DB_PASSWORD:'la65E2Rzzys',
 OPENSHIFT_MYSQL_DB_URL:'mysql://adminfG3JNNG:la65E2Rzzys4@127.4.188.2:3306'
 
 });
+*/
+var connection = mysql.createConnection({
 
+host :'127.4.188.2',
+//port :'3306', // if this doesn't work try removing port once
+user:'adminfG3JNNG',
+password:'la65E2Rzzys',
+database:'nammaooru',
+});
 
 connection.connect(function(err,success){
   if (err) {
