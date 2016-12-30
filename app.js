@@ -54,7 +54,7 @@ OPENSHIFT_MYSQL_DB_URL:'mysql://adminfG3JNNG:la65E2Rzzys4@127.4.188.2:3306'
 
 var connection = mysql.createConnection({
   host     : 'localhost',
-  port:'3306',
+//  port:'3306',
   user     : 'root',
   password : '',
   database : 'nammaooru'
